@@ -10,13 +10,355 @@
 
 <body>
     <div id="app">
-        <div class="flex flex-col gap-3 m-5">
-            <a href="/index.html">Home</a>
-            <a href="/pages/products.html">Products</a>
-            <a href="/pages/product_page.html">Products page</a>
-            <a href="/pages/additional_accessories.html">Additional Accessories</a>
-            <a href="/pages/contact.html">Contact</a>
-        </div>
+        <header>
+            <div class="topbar text-center py-4 bg-green-50 text-green-900">
+                Free Shipping on orders over <span class="font-bold">50$</span>
+            </div>
+            <nav class="bg-white border-gray-200 px-7 md:px-0">
+                <div class="max-w-screen-xl flex flex-wrap items-center mx-auto md:px-8 md:py-6 p-4">
+                    <a href="/index.html">
+                        <h1 class="text-3xl font-bold uppercase">Sweatshirts</h1>
+                    </a>
+                    <div class="flex ml-auto md:order-2 md:hidden lg:block">
+                        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                            aria-expanded="false"
+                            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1">
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                        <div class="relative hidden lg:block">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar"
+                                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Search..." />
+                        </div>
+                        <button data-collapse-toggle="navbar-search" type="button" id="navbar-toggle-btn"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                            aria-controls="navbar-search" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ml-auto lg:ml-10"
+                        id="navbar-search">
+                        <div class="relative mt-3 md:hidden">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="search-navbar"
+                                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Search..." />
+                        </div>
+                        <ul
+                            class="flex flex-col items-center p-4 md:p-0 mt-4 gap-4 font-medium border border-gray-100 rounded-lg bg-gray-50 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                            <li>
+                                <a href="/" class=" block py-2 px-3 hover:bg-gray-200 rounded-lg"
+                                    aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="/pages/products.html"
+                                    class=" block py-2 px-3 hover:bg-gray-200 rounded-lg">Products</a>
+                            </li>
+                            <li>
+                                <a href="/pages/additional_accessories.html"
+                                    class=" block py-2 px-3 bg-gray-200 rounded-lg">Accessories</a>
+                            </li>
+                            <li>
+                                <a href="/pages/contact.html"
+                                    class="block py-2 px-3 hover:bg-gray-200 rounded-lg">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <!-- ✅ Grid Section - Starts Here 👇 -->
+            <section id="Projects"
+                class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 my-20 ">
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+                <!--   ✅ Product card 2 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 2- Ends Here  -->
+
+                <!--   ✅ Product card 3 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1651950537598-373e4358d320?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 3 - Ends Here  -->
+
+                <!--   ✅ Product card 4 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1651950540805-b7c71869e689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 4 - Ends Here  -->
+
+                <!--   ✅ Product card 5 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1649261191624-ca9f79ca3fc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 5 - Ends Here  -->
+
+                <!--   ✅ Product card 6 - Starts Here 👇 -->
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+                    <a href="/pages/product_page.html">
+                        <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+                        <div class="px-4 py-3 w-72">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 6 - Ends Here  -->
+
+            </section>
+
+            <!-- 🛑 Grid Section - Ends Here -->
+
+
+
+
+
+
+
+
+        </main>
+        <footer class="px-6 sm:px-16 shadow  bg-gray-800">
+            <div class="w-full mx-auto p-8 md:flex md:items-center md:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                        href="https://flowbite.com/" class="hover:underline">Mubz</a>. All Rights Reserved.
+                </span>
+                <ul
+                    class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="/index.html" class="hover:underline me-4 md:me-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="/pages/products.html" class="hover:underline me-4 md:me-6">Products</a>
+                    </li>
+                    <li>
+                        <a href="/pages/additional_accessories.html" class="hover:underline me-4 md:me-6">Additional
+                            Accessories</a>
+                    </li>
+                    <li>
+                        <a href="/pages/contact.html" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </div>
     <script type="module" src="/main.js"></script>
 </body>
